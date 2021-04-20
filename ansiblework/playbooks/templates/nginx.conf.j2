@@ -1,7 +1,7 @@
 upstream test {
-    { % for server in groups.webserver %}
+    {% for server in groups.webserver %}
     server {{ server }};
-    {%endfor%}
+    {% endfor %}
 }
 
 server {
